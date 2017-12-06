@@ -379,7 +379,7 @@ function startHelloWebGL()
         mat4.translate(mvMatrix, [0.0, 0.0, -10.0]);
 
         mat4.rotate(mvMatrix, xRot/180.0*3.1415, [0, 0, 0]);
-        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, 0, 0]);
+        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, thing, 0]);
         mat4.rotate(mvMatrix, zRot/180.0*3.1415, [0, 0, 0]);
 
         gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
