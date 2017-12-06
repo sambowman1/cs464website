@@ -428,14 +428,13 @@ function startHelloWebGL()
 <!-- declare the "body" of the HTML document-->
 <!-- the onload attribute specifies a javascript function to execute when the body tag is loaded into the browser -->
 
-<body onload="startHelloWebGL()">
-<h1>two cameras heroku</h1>
+<body style="margin: 0; width:100%; height: 100%;" onload="startHelloWebGL()">
 
 <!-- embed the HTML5 Canvas Drawing object on the page.-->
 <!-- Name the canvas 'hellowebgl' for the javascript code. -->
 <div>
 <div style="position: absolute;">
-	<canvas id="hellowebgl" width=1024 height=576>
+	<canvas style="width:100%; height: 100%;" id="hellowebgl" width=1024 height=576>
 	If you're seeing this your web browser doesn't support the &lt;canvas>&gt; element. Ouch!
 	</canvas>
 </div>
