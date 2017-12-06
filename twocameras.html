@@ -8,6 +8,7 @@
 <!-- load matrix manipulation helper methods -->	
 <script type="text/javascript" src="glMatrix_util.js"></script>
 <script type="text/javascript" src="webgl-utils.js"></script>
+	<script type="text/javascript" src="mouse.js"></script>
 
 <!-- define our shaders -->
 <script id="shader-fs" type="x-shader/x-fragment">
@@ -314,6 +315,9 @@ function startHelloWebGL()
    initShaders();
    initGeometry();
    initTextures();
+
+   //Mouse
+   document.onmousedown = handleMouseDown;
    
    gl.clearColor(0.4,0.4,0.4,1.0);
    gl.enable(gl.DEPTH_TEST);
@@ -332,6 +336,7 @@ function startHelloWebGL()
    var xRot = 0;
     var yRot = 0;
     var zRot = 0;
+    var thing = 0;
 
     function drawScene() {
         gl.viewport(512, 0, 512, gl.viewportHeight);
@@ -343,8 +348,9 @@ function startHelloWebGL()
 
         mat4.translate(mvMatrix, [0.0, 0.0, -10.0]);
 
+
         mat4.rotate(mvMatrix, xRot/180.0*3.1415, [0, 0, 0]);
-        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, 1, 0]);
+        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, thing, 0]);
         mat4.rotate(mvMatrix, zRot/180.0*3.1415, [0, 0, 0]);
 
         gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
@@ -373,7 +379,7 @@ function startHelloWebGL()
         mat4.translate(mvMatrix, [0.0, 0.0, -10.0]);
 
         mat4.rotate(mvMatrix, xRot/180.0*3.1415, [0, 0, 0]);
-        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, 1, 0]);
+        mat4.rotate(mvMatrix, yRot/180.0*3.1415, [0, thing, 0]);
         mat4.rotate(mvMatrix, zRot/180.0*3.1415, [0, 0, 0]);
 
         gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
