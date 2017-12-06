@@ -1,0 +1,21 @@
+Sam Bowman
+Assignment 1
+
+List of Files
+ * hellowebgl.html ~ starter file
+ * hellowebgl_texture.html ~ starter file
+ * glMatrix_util.js ~ starter file
+ * webgl-utils.js ~ starter file
+ * yrotate.html ~ file that when opened in chrome will rotate around the y axis
+ * altshape.html ~ file that when opened in chrome will rotate an alternate shape
+ * textureimages.html ~ file that when opened will rotate a cube with 3 custom images
+ * box.png, pic1.jpg, pic2.jpg, pic3.jpg ~ images used for textures
+
+Tasks
+ Rotate cube around y axis      - complete
+ Rotate an alternate shape      - complete
+ Rotate a cube with 3 pics      - complete
+ Rotate cube with other shaders - incomplete
+
+No extra credit attempted
+No collaborators
